@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import Main from "./pages/Main"
+
+import Login from "./pages/Login";
+import UserSignUp from "./pages/UserSignUp";
+
 function App() {
   return (
     <div>
-      {/* <h1>Jumpstarter.</h1>
-      <h1>Now</h1>
-      <p>Some cool explenation</p> */}
-      <Main/>
+      <Login></Login>
     </div>
   );
 }
