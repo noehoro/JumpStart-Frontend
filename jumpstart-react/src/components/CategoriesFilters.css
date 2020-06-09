@@ -11,6 +11,6 @@
 } */
 
 .input-height {
-  height: 60px;
+  min-height: 55px;
   border-radius: 8px;
 }

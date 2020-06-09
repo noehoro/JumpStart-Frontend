@@ -6,20 +6,22 @@ const CategoriesFilters = () => {
     <div className="container">
       <div className="row mt-3">
         <div className="col-10">
-          <div className="input-group">
-            <input
-              type="text"
-              className="form-control input-height"
-              placeholder="Search for a category"
-            ></input>
-            <div className="input-group-append">
-              <button
-                className="btn btn-outline-secondary"
-                type="button"
-                id="button-addon2"
-              >
-                Search
-              </button>
+          <div className="">
+            <div className="input-group input-height">
+              <input
+                type="text"
+                className="form-control input-height"
+                placeholder="Search for a category"
+              ></input>
+              <div className="input-group-append">
+                <button
+                  className="btn btn-outline-secondary"
+                  type="button"
+                  id="button-addon2"
+                >
+                  Search
+                </button>
+              </div>
             </div>
           </div>
         </div>

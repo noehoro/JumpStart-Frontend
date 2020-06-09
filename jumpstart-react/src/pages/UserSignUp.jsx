@@ -1,22 +1,18 @@
-import React, { useState, useEffect } from 'react'
-import './UserSignUp.css'
-import '../signUp/PhaseOne'
-import Button from 'react-bootstrap/button'
-import PhaseOne from '../signUp/PhaseOne'
+import React, {useState, useEffect} from "react";
+import "./UserSignUp.css";
+import "../signUp/PhaseOne";
+// import Button from 'react-bootstrap/button'
+import PhaseOne from "../signUp/PhaseOne";
 
 function UserSignUp(props) {
+  const [prev, setPrev] = useState(true);
+  const [next, setNext] = useState(true);
 
-    const [prev, setPrev] = useState(true)
-    const [next, setNext] = useState(true)
-
-
-
-    return (
-
-        <div >
-            <PhaseOne />
-        </div>
-    )
+  return (
+    <div>
+      <PhaseOne />
+    </div>
+  );
 }
 
-export default UserSignUp
+export default UserSignUp;

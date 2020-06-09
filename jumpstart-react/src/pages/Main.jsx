@@ -2,7 +2,6 @@ import React, {useState, useEffect} from "react";
 import Category from "../components/Category";
 import "./Main.css";
 import Filters from "../components/Filters";
-import Axios from "axios";
 import CategoriesFilters from "../components/CategoriesFilters";
 
 const Main = () => {
@@ -11,18 +10,6 @@ const Main = () => {
   const handleOnClick = (title) => {
     setCategory(title);
   };
-
-  const fetch = async () => {
-    let response = await Axios.get(
-      "https://jumpstarthack.herokuapp.com/api/test"
-    );
-
-    console.log(response.data);
-  };
-
-  useEffect(() => {
-    fetch();
-  }, []);
 
   return (
     <div>

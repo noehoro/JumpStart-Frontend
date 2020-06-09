@@ -1,12 +1,13 @@
 import React, {useState} from "react";
-import Calendar from "../components/Calendar";
 
 const Filters = (props) => {
   const [morning, setMorning] = useState(false);
   const [evening, setEvening] = useState(false);
   const [week, setWeek] = useState(false);
   const [weekEnd, setWeekEnd] = useState(false);
-  const {category} = props;
+  const [location, setlocation] = useState("");
+  const [comments, setComments] = useState("");
+  const {category, title} = props;
 
   const toggleWeek = () => {
     if (!week) {
@@ -14,7 +15,6 @@ const Filters = (props) => {
     } else {
       setWeek(false);
     }
-    console.log(week);
   };
 
   const toggleWeekEnd = () => {
@@ -23,7 +23,6 @@ const Filters = (props) => {
     } else {
       setWeekEnd(false);
     }
-    console.log(weekEnd);
   };
 
   const toggleDay = () => {
@@ -32,7 +31,6 @@ const Filters = (props) => {
     } else {
       setMorning(false);
     }
-    console.log(morning);
   };
 
   const togggleEvening = () => {
@@ -41,7 +39,20 @@ const Filters = (props) => {
     } else {
       setEvening(false);
     }
-    console.log(evening);
+  };
+
+  const handleSubmit = () => {
+    props.onSubmit()
+    let data = {
+      category: category,
+      morning: morning,
+      evening: evening,
+      week: week,
+      weekEnd: weekEnd,
+      location: location,
+      comments: comments,
+    };
+    console.log(data);
   };
 
   return (
@@ -51,11 +62,6 @@ const Filters = (props) => {
           <div className="row justify-content-center mt-4">
             <div className="col-6 d-flex justify-content-center">
               <h1>Filters</h1>
-            </div>
-          </div>
-          <div className="row justify-content-center mt-4">
-            <div className="col-6 d-flex justify-content-center">
-              <h2>{category}</h2>
             </div>
           </div>
           <div className="mt-3 mb-3">
@@ -127,7 +133,7 @@ const Filters = (props) => {
               <div className="col-6 d-flex justify-content-start">
                 <select
                   onChange={(e) => {
-                    console.log(e.target.value);
+                    setlocation(e.target.value);
                   }}
                   className="form-control form-control-sm ml-5 mr-5"
                 >
@@ -147,6 +153,9 @@ const Filters = (props) => {
               </div>
               <div className="col-6 d-flex justify-content-start">
                 <input
+                  onChange={(e) => {
+                    setComments(e.target.value);
+                  }}
                   className=" ml-5 input-rounded"
                   type="text"
                   placeholder=" Any additional requirements.."
@@ -156,7 +165,16 @@ const Filters = (props) => {
           </div>
           <div className="row justify-content-center mt-5">
             <div className="col-6 d-flex justify-content-center">
-              <button className="btn btn-warning p-3">Submit</button>
+              <button
+                data-toggle="collapse"
+                data-target={`#${title}`}
+                onClick={() => {
+                  handleSubmit();
+                }}
+                className="btn btn-warning p-3"
+              >
+                Submit
+              </button>
             </div>
           </div>
         </div>
