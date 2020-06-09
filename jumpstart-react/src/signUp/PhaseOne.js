@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import Button from 'react-bootstrap/button'
+import './PhaseOne.css'
 
 
 function PhaseOne(props) {
@@ -10,7 +11,7 @@ function PhaseOne(props) {
 
 
     return (
-        <form class="formContainer">
+        <form class="formContainer" method="POST" action="">
             <input
                 type="text"
                 name="first_name"
@@ -43,6 +44,7 @@ function PhaseOne(props) {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
+            <Button variant="primary" className="saveButton" size="lg" type="submit">Save</Button>
         </form>
     )
 }

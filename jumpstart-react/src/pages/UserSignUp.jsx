@@ -4,6 +4,7 @@ import '../signUp/PhaseOne'
 import Button from 'react-bootstrap/button'
 import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
 import PhaseOne from '../signUp/PhaseOne'
+import PhaseTwo from '../signUp/PhaseTwo'
 
 function UserSignUp(props) {
     const [phase, setPhase] = useState(1)
@@ -82,6 +83,9 @@ function UserSignUp(props) {
                 {phase2 && <Redirect to="/signUp/phaseTwo" />}
                 {phase3 && <Redirect to="/signUp/phaseThree" />}
                 {phase4 && <Redirect to="/signUp/phaseFour" />}
+
+
+                {prev ? <Button className="nextButton" onClick={prevPhase}>back</Button> : <Button className="nextButton" disabled>back</Button>}
                 <div className="phaseBar">
                     <div className="phaseButton">
                         <Link to="/signUp/phaseOne">1
@@ -100,16 +104,18 @@ function UserSignUp(props) {
                         </Link>
                     </div>
                 </div>
-
+                {next ? <Button className="nextButton" onClick={nextPhase}>next</Button> : <Button className="nextButton" disabled>next</Button>}
 
             </div>
             <Switch>
-                <Route path={["/signUp", "/signUp/phaseOne"]}>
+                <Route exact path={["/signUp", "/signUp/phaseOne"]}>
                     <PhaseOne />
                 </Route>
+                <Route path={"/signUp/phaseTwo"}>
+                    <PhaseTwo />
+                </Route>
             </Switch>
-            {prev ? <Button className="nextButton" onClick={prevPhase}>back</Button> : <Button className="nextButton" disabled>back</Button>}
-            {next ? <Button className="nextButton" onClick={nextPhase}>next</Button> : <Button className="nextButton" disabled>next</Button>}
+
         </Router>
     )
 }
