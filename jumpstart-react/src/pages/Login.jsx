@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import './Login.css'
-import logo from '../'
 import Button from 'react-bootstrap/button'
+import { BrowserRouter as Router, Switch, Route, Link, Redirect } from 'react-router-dom'
+import UserSignUp from './UserSignUp'
 
 function Login(props) {
-    const [email, setEmail] = useState('')
+    const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
     const [errorMsg, setErrorMsg] = useState('')
 
@@ -24,27 +25,26 @@ function Login(props) {
     } */
 
     return (
-
         <div>
             <div className="welcomeHeader">
                 <img className="logo" src={process.env.PUBLIC_URL + '/logo.jpeg'} />
             </div>
             <div className="loginContainer">
-                <form method="POST" action="" >
+                <form method="POST" action="https://jumpstarthack.herokuapp.com/api/login" >
                     <h1 className="loginHeader">Login</h1>
                     <input
                         type="text"
-                        name="email"
+                        name="userName"
                         className="loginBox"
-                        placeholder="Email"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
+                        placeholder="User name"
+                        value={userName}
+                        onChange={(e) => setUserName(e.target.value)}
                     />
                     <input
                         type="password"
                         name="password"
                         className="loginBox"
-                        placeholder="password"
+                        placeholder="Password"
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
@@ -57,7 +57,6 @@ function Login(props) {
                 </form>
                 <div>
                     <h4>Not yet Registered?</h4>
-                    <Button variant="primary">SignUp</Button>
                 </div>
             </div>
         </div>
