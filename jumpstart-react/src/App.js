@@ -7,7 +7,7 @@ import UserSignUp from "./pages/UserSignUp";
 function App() {
   return (
     <div>
-      <Login></Login>
+      <UserSignUp></UserSignUp>
     </div>
   );
 }
