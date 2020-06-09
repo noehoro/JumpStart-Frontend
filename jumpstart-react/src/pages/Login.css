@@ -1,40 +1,40 @@
 .welcomeHeader {
-    width: 100%;
-    height: 150px;
-    background-color: white;
-    margin: 0;
-    padding: 0;
-    display: flex;
+  width: 100%;
+  height: 150px;
+  background-color: white;
+  margin: 0;
+  padding: 0;
+  display: flex;
 }
 
 .logo {
-    width: 200px;
-    height: auto;
-    margin-left: 100px;
-    padding: 0;
+  width: 200px;
+  height: auto;
+  margin-left: 100px;
+  padding: 0;
 }
 
-.loginContainer{
-    width: 100%;
-    height: 600px;
-    background-color: rgb(140, 197, 243);
-    text-align: center;
+.loginContainer {
+  width: 100%;
+  height: 720px;
+  background-color: rgb(140, 197, 243);
+  text-align: center;
 }
 
-.loginHeader{
-    padding-top:20px;
-    margin-top: 0px;
-    margin-bottom: 40px;
-    font-size: 50px;
+.loginHeader {
+  padding-top: 20px;
+  margin-top: 0px;
+  margin-bottom: 40px;
+  font-size: 50px;
 }
 
 .errorMsg {
-    width: 200px;
-    height: 60px;
-    border: solid 1px black;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 20px;
+  width: 200px;
+  height: 60px;
+  border: solid 1px black;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 20px;
 }
 
 .saperateLine{
@@ -118,9 +118,23 @@
     margin-left: 30px;
 }
 
-
-
 .slider{
     margin-top: 40px;
+}
 
+.saperateLine {
+  width: 400px;
+  border-color: black;
+}
+
+.login-width {
+  width: 400px;
+  height: 100px;
+}
+input:focus {
+  outline: none;
+}
+
+.input-color {
+  background-color: white;
 }

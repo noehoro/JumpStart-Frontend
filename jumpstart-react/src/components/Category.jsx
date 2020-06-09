@@ -1,12 +1,25 @@
-import React from "react";
+import React, {useState} from "react";
 import "./Category.css";
 import Filters from "../components/Filters";
 
 const Category = (props) => {
+  const [successSubmit, setSuccessSubmit] = useState("");
   const {title, description, img, onClick} = props;
+
+  const handleOnSubmit = () => {
+    setSuccessSubmit(true);
+    setTimeout(() => {
+      setSuccessSubmit(false);
+    }, 2000);
+  };
   return (
     <>
       <div className="mt-3 ">
+        {successSubmit && (
+          <div className="alert alert-success" role="alert">
+            <h1>request sent succesfully</h1>
+          </div>
+        )}
         <button
           data-toggle="collapse"
           data-target={`#${title}`}
@@ -26,7 +39,7 @@ const Category = (props) => {
         </button>
         <div>
           <div className="collapse" id={title}>
-            <Filters />
+            <Filters category={title} title={title} onSubmit={handleOnSubmit} />
           </div>
         </div>
       </div>
