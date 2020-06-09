@@ -1,13 +1,11 @@
 import React from "react";
 import "./App.css";
+import Login from './pages/Login'
 
 function App() {
   return (
     <div>
-      <h1>Jumpstarter.</h1>
-      <h1>Now</h1>
-      <p>Some cool explenation</p>
-      <P>LALAL</P>
+      <Login></Login>
     </div>
   );
 }
