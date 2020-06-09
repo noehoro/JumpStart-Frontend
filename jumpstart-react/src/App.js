@@ -5,7 +5,8 @@ import "./App.css";
 function App() {
   return (
     <div>
-      <h1>Jumpstarter.</h1>
+      <h1>Jumpstarter</h1>
+      <p>Some cool explenation</p>
     </div>
   );
 }
