@@ -1,0 +1,21 @@
+.title-div {
+  height: 150px;
+  background-color: lightcoral;
+}
+
+.categories-div {
+  min-height: 800px;
+  background-color: lightcyan;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+.text-header {
+  font-size: 60px;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}

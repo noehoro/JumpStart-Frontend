@@ -1,0 +1,25 @@
+.category-div {
+  background-color: white;
+  width: 80vw;
+  height: 200px;
+  /* box-shadow: 2px 2px 5px 5px */
+  border-radius: 30px;
+}
+
+.align-text-center {
+  text-align: center;
+}
+
+.hover-btn:hover {
+  transform: translate(5px, 5px);
+  transition-duration: 5s;
+  z-index: 1;
+}
+
+.hover-btn:hover {
+  outline: 0;
+}
+
+button:focus {
+  outline: none;
+}
