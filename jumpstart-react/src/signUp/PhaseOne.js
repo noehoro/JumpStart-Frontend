@@ -4,48 +4,39 @@ import './PhaseOne.css'
 
 
 function PhaseOne(props) {
-    const [firstName, setFirstName] = useState('')
-    const [lastName, setLastName] = useState('')
-    const [email, setEmail] = useState('')
+    const [userName, setUserName] = useState('')
     const [password, setPassword] = useState('')
+    const [array, setArray] = useState([])
+
+    const goNext = () => {
+        let _json = []
+        _json.push(userName)
+        _json.push(password)
+        setArray(_json)
+        console.log(array)
+    }
 
 
     return (
-        <form class="formContainer" method="POST" action="">
+        <div className="formContainer">
             <input
                 type="text"
-                name="first_name"
+                name="username"
                 className="loginBox"
-                placeholder="First Name"
-                value={firstName}
-                onChange={(e) => setFirstName(e.target.value)}
-            />
-            <input
-                type="text"
-                name="last_name"
-                className="loginBox"
-                placeholder="Last Name"
-                value={lastName}
-                onChange={(e) => setLastName(e.target.value)}
-            />
-            <input
-                type="text"
-                name="email"
-                className="loginBox"
-                placeholder="Email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
+                placeholder="Please choose User Name"
+                value={userName}
+                onChange={(e) => setUserName(e.target.value)}
             />
             <input
                 type="password"
                 name="password"
                 className="loginBox"
-                placeholder="password"
+                placeholder="Please choose a password"
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
-            <Button variant="primary" className="saveButton" size="lg" type="submit">Save</Button>
-        </form>
+            <Button variant="primary" className="saveButton" size="lg" onClick={goNext}>Next</Button>
+        </div>
     )
 }
 export default PhaseOne

@@ -1,3 +1,9 @@
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
 .saveButton{
     width: 100px;
     margin-left: 40px;
