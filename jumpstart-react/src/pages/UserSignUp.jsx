@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import './UserSignUp.css'
-import '../signUp/PhaseOne'
 import Button from 'react-bootstrap/button'
-import PhaseOne from '../signUp/PhaseOne'
+import BuildProfile from './BuildProfile'
 
 function UserSignUp(props) {
 
@@ -10,11 +8,10 @@ function UserSignUp(props) {
     const [next, setNext] = useState(true)
 
 
-
     return (
 
         <div >
-            <PhaseOne />
+            <BuildProfile />
         </div>
     )
 }

@@ -41,3 +41,86 @@
     width: 400px;
     border-color: black;
 }
+
+.loginBox{
+
+    width: 400px;
+    height: 71px;
+    margin-top: 50px;
+    margin-left: 40px;
+  
+    border: 1px solid rgb(191, 195, 233);
+    box-sizing: border-box;
+    border-radius: 6px; 
+    font-size: 16px;
+    padding-left: 20px;
+    color: black;
+  }
+
+  .inputBox{
+
+    width: 400px;
+    height: 71px;
+    margin-top: 50px;
+    margin-left: 40px;
+  
+    border: 1px solid rgb(191, 195, 233);
+    box-sizing: border-box;
+    border-radius: 6px; 
+    font-size: 16px;
+    padding-left: 20px;
+    color: black;
+  }
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    color: black;
+}
+
+.saveButton{
+    width: 100px;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+
+.line{
+    margin-top: 50px;
+    width: 500px;
+}
+
+.box{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: rgb(155, 155, 211);
+}
+
+.lightBox{
+    width: 200px;
+    height: 200px;
+    margin-left: 20px;
+    margin-top: 20px;
+    background-color: rgb(211, 173, 155);
+}
+
+.icon {
+    width: 40px;
+    height: auto;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+
+.gina {
+    width: 80px;
+    height: auto;
+    margin-left: 30px;
+}
+
+
+
+.slider{
+    margin-top: 40px;
+
+}
