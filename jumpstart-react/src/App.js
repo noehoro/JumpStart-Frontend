@@ -7,6 +7,7 @@ function App() {
     <div>
       <h1>Jumpstarter.</h1>
       <h1>Now</h1>
+      <p>Some cool explenation</p>
     </div>
   );
 }
