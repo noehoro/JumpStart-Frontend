@@ -14,11 +14,13 @@ function Login(props) {
         const postData = { "username": userName, "password": password }
         axios.post('https://jumpstarthack.herokuapp.com/api/login', postData)
             .then(res => {
-                if (res.data.id) {
-                    setId(res.data.id)
+                if (res.data.data) {
+                    setId(res.data.data.id)
+                    console.log(res.data.data)
                 }
                 else {
                     setId(false)
+                    console.log("FALSE")
                 }
             })
     }
