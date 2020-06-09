@@ -8,6 +8,7 @@ function App() {
       <h1>Jumpstarter.</h1>
       <h1>Now</h1>
       <p>Some cool explenation</p>
+      <P>LALAL</P>
     </div>
   );
 }
