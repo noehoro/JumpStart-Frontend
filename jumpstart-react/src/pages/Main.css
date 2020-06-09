@@ -1,11 +1,11 @@
 .title-div {
   height: 150px;
-  background-color: lightcyan;
+  background-color: rgb(140, 197, 243);
 }
 
 .categories-div {
   min-height: 800px;
-  background-color: lightcyan;
+  background-color: rgb(140, 197, 243);
 }
 
 .align-text-center {
@@ -19,3 +19,4 @@
 .flex-wrap {
   flex-wrap: wrap;
 }
+

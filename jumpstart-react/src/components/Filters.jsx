@@ -171,7 +171,7 @@ const Filters = (props) => {
                 onClick={() => {
                   handleSubmit();
                 }}
-                className="btn btn-warning p-3"
+                className="btn btn-warning p-3 rounded-pill"
               >
                 Submit
               </button>

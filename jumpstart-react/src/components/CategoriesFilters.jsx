@@ -7,7 +7,7 @@ const CategoriesFilters = () => {
       <div className="row mt-3">
         <div className="col-10">
           <div className="">
-            <div className="input-group input-height">
+            <div className="input-group input-height ">
               <input
                 type="text"
                 className="form-control input-height"
@@ -28,7 +28,7 @@ const CategoriesFilters = () => {
         <div className="col-2">
           <div className="dropdown">
             <button
-              className="btn btn-large btn-secondary dropdown-toggle  p-3"
+              className="btn btn-large btn-secondary dropdown-toggle p-3 rounded-pill"
               type="button"
               id="dropdownMenuButton"
               data-toggle="dropdown"
