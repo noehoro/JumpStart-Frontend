@@ -12,7 +12,7 @@ function Login(props) {
 
     const login = () => {
         const postData = { "userName": userName, "password": password }
-        axios.post('http://localhost:5000/login', postData)
+        axios.post('https://jumpstarthack.herokuapp.com/api/login', postData)
             .then(res => {
                 if (res.data.id) {
                     setId(res.data.id)
@@ -29,7 +29,7 @@ function Login(props) {
                 <img className="logo" src={process.env.PUBLIC_URL + '/logo.jpeg'} />
             </div>
             <div className="loginContainer">
-                <div action="https://jumpstarthack.herokuapp.com/api/login" >
+                <div >
                     <h1 className="loginHeader">Login</h1>
                     <input
                         type="text"
@@ -50,14 +50,9 @@ function Login(props) {
                     <div>
                         <Button className="loginButton" onClick={login} >Login</Button>
                     </div>
-                    <div className="errorMsg">Error box
-                </div>
-                    <hr className="saperateLine"></hr>
-                </div>
-                <div>
-                    <h4>Not yet Registered?</h4>
                 </div>
             </div>
+
         </div>
     )
 }
