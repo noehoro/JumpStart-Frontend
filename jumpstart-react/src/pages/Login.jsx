@@ -27,7 +27,7 @@ function Login(props) {
 
   return (
     <div>
-      {/* <div className="welcomeHeader"></div> */}
+      <div className="welcomeHeader"></div>
       <div className="loginContainer">
         <div>
           <h1 className="loginHeader pt-5">Login</h1>
