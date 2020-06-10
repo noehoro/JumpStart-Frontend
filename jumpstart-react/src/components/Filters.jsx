@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import Axios from "axios";
 
 const Filters = (props) => {
   const [morning, setMorning] = useState(false);
@@ -41,21 +42,53 @@ const Filters = (props) => {
     }
   };
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    let week_times = 2;
+
+    // if (week && morning) {
+    //   week_times.push(0);
+    // }
+    // if (week && evening) {
+    //   week_times.push(1);
+    // }
+    // if (weekEnd && morning) {
+    //   week_times.push(2);
+    // }
+    // if (weekEnd && evening) {
+    //   week_times.push(3);
+    // }
+
     props.onSubmit();
     let userId = localStorage.getItem("id");
     let data = {
-      userid: userId,
-      categoryId: id,
-      category: category,
-      morning: morning,
-      evening: evening,
-      week: week,
-      weekEnd: weekEnd,
+      id: userId,
+      category_id: id,
+      time_range: week_times,
       location: location,
-      comments: comments,
+      comment: comments,
     };
-    console.log(data);
+    (async () => {
+      const rawResponse = await fetch(
+        "https://jumpstarthack.herokuapp.com/api/request",
+        {
+          method: "POST",
+          headers: {
+            Accept: "application/json",
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            id: userId,
+            category_id: id,
+            time_range: week_times,
+            location: location,
+            comment: comments,
+          }),
+        }
+      );
+      const content = await rawResponse.json();
+      console.log(content);
+      localStorage.setItem("sent", true);
+    })();
   };
 
   return (
@@ -80,9 +113,9 @@ const Filters = (props) => {
                     }}
                     type="checkbox"
                     className="custom-control-input"
-                    id="week"
+                    id={`week${id}`}
                   ></input>
-                  <label className="custom-control-label" htmlFor="week">
+                  <label className="custom-control-label" htmlFor={`week${id}`}>
                     Week
                   </label>
                 </div>
@@ -93,9 +126,12 @@ const Filters = (props) => {
                     }}
                     type="checkbox"
                     className="custom-control-input"
-                    id="week-end"
+                    id={`week-end${id}`}
                   ></input>
-                  <label className="custom-control-label" htmlFor="week-end">
+                  <label
+                    className="custom-control-label"
+                    htmlFor={`week-end${id}`}
+                  >
                     Week-end
                   </label>
                 </div>
@@ -106,9 +142,12 @@ const Filters = (props) => {
                     }}
                     type="checkbox"
                     className="custom-control-input"
-                    id="day-time"
+                    id={`day-time${id}`}
                   ></input>
-                  <label className="custom-control-label" htmlFor="day-time">
+                  <label
+                    className="custom-control-label"
+                    htmlFor={`day-time${id}`}
+                  >
                     Day-time
                   </label>
                 </div>
@@ -119,9 +158,12 @@ const Filters = (props) => {
                     }}
                     type="checkbox"
                     className="custom-control-input"
-                    id="evening"
+                    id={`evening${id}`}
                   ></input>
-                  <label className="custom-control-label" htmlFor="evening">
+                  <label
+                    className="custom-control-label"
+                    htmlFor={`evening${id}`}
+                  >
                     Evening
                   </label>
                 </div>

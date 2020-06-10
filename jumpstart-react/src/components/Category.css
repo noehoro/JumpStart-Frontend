@@ -70,3 +70,7 @@ button:focus {
 .bg-11 {
   background-color: rgb(78, 67, 161, 0.3);
 }
+
+.bg-12 {
+  background-image: url("");
+}
