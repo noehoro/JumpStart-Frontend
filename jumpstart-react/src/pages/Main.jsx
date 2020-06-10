@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Category from "../components/Category";
 import "./Main.css";
 import Filters from "../components/Filters";
