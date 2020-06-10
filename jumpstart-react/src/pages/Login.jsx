@@ -46,7 +46,7 @@ function Login(props) {
                         value={password}
                         onChange={(e) => setPassword(e.target.value)}
                     />
-                    <div className="mt-5 pt-5">
+                    <div >
                         <button
                             className="goButton"
                             onClick={login}

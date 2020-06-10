@@ -8,7 +8,8 @@ import * as Scroll from 'react-scroll';
 function BuildProfile(props) {
     const [phaseOne, setPhaseOne] = useState(false)
     const [phaseTwo, setPhaseTwo] = useState(false)
-    const [fullName, setFullName] = useState('')
+    const [firstName, setFirstName] = useState('')
+    const [lastName, setLastName] = useState('')
     const [gender, setGender] = useState('')
     const [email, setEmail] = useState('')
     const [userName, setUserName] = useState('')
@@ -48,47 +49,60 @@ function BuildProfile(props) {
     return (
         <div className="formContainer">
             <h2 className="profileTitle"> Personal details</h2>
-            <input
-                type="text"
-                name="fullname"
-                className="inputBox"
-                placeholder="Please enter your full name"
-                value={fullName}
-                onChange={(e) => setFullName(e.target.value)}
-            />
-
-            <input
-                type="text"
-                name="gender"
-                className="inputBox"
-                placeholder="Please enter your gender"
-                value={gender}
-                onChange={(e) => setGender(e.target.value)}
-            />
-            <input
-                type="text"
-                name="email"
-                className="inputBox"
-                placeholder="Please enter your email"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-            />
-            <input
-                type="text"
-                name="username"
-                className="inputBox"
-                placeholder="Please choose User Name"
-                value={userName}
-                onChange={(e) => setUserName(e.target.value)}
-            />
-            <input
-                type="password"
-                name="password"
-                className="inputBox"
-                placeholder="Please choose a password"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-            />
+            <div className="doubleInput">
+                <input
+                    type="text"
+                    name="firstName"
+                    className="inputBox"
+                    placeholder="Please enter your first name"
+                    value={firstName}
+                    onChange={(e) => setFirstName(e.target.value)}
+                />
+                <input
+                    type="text"
+                    name="lastName"
+                    className="inputBox"
+                    placeholder="Please enter your first name"
+                    value={lastName}
+                    onChange={(e) => setLastName(e.target.value)}
+                />
+            </div>
+            <div className="doubleInput">
+                <input
+                    type="text"
+                    name="gender"
+                    className="inputBox"
+                    placeholder="Please enter your gender"
+                    value={gender}
+                    onChange={(e) => setGender(e.target.value)}
+                />
+                <input
+                    type="text"
+                    name="email"
+                    className="inputBox"
+                    placeholder="Please enter your email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                />
+            </div>
+            <div className="doubleInput">
+                <input
+                    type="text"
+                    name="username"
+                    className="inputBox"
+                    placeholder="Please choose User Name"
+                    value={userName}
+                    onChange={(e) => setUserName(e.target.value)}
+                />
+                <input
+                    type="password"
+                    name="password"
+                    className="inputBox"
+                    placeholder="Please choose a password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
             <Button className="nextButton" onClick={scrollOne}>Next</Button>
             {phaseOne &&
                 <>
@@ -213,7 +227,7 @@ function BuildProfile(props) {
                     <div className="slideCon">
                         <div>Beer or Wine</div>
                         <div className="slider">
-                            <img className="icon" src={process.env.PUBLIC_URL + '/beer.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2017/05/05/19/33/beer-2288121_960_720.jpg" />
                             <Slider
                                 axis="x"
                                 xstep={1}
