@@ -1,9 +1,9 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, {useState} from "react";
+import {Link} from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
-  const { id } = props;
+  const {id} = props;
 
   const handleLogOut = () => {
     localStorage.removeItem("id");
@@ -34,7 +34,7 @@ const NavBar = (props) => {
         {id && (
           <li className="nav-item mr-5 pr-5">
             <Link className="nav-link nav-text" to="/categories">
-              <h4>Look for event</h4>
+              <h4 className="tags">Look for event</h4>
             </Link>
           </li>
         )}
@@ -48,13 +48,15 @@ const NavBar = (props) => {
               className="nav-link nav-text"
               to="/categories"
             >
-              <h4>Log-out</h4>
+              <h4 className="tags">Log-out</h4>
             </Link>
           </li>
         )}
         <li className="nav-item ">
           <span>
-            {id && <h4 className="">{`welcome: ${localStorage.username}`}</h4>}
+            {id && (
+              <h4 className="tags">{`welcome: ${localStorage.username}`}</h4>
+            )}
           </span>
         </li>
       </ul>

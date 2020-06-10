@@ -5,9 +5,9 @@ const Filters = (props) => {
   const [evening, setEvening] = useState(false);
   const [week, setWeek] = useState(false);
   const [weekEnd, setWeekEnd] = useState(false);
-  const [location, setlocation] = useState("");
+  const [location, setlocation] = useState("TELAVIV");
   const [comments, setComments] = useState("");
-  const {category, title} = props;
+  const {category, title, id} = props;
 
   const toggleWeek = () => {
     if (!week) {
@@ -42,8 +42,11 @@ const Filters = (props) => {
   };
 
   const handleSubmit = () => {
-    props.onSubmit()
+    props.onSubmit();
+    let userId = localStorage.getItem("id");
     let data = {
+      userid: userId,
+      categoryId: id,
       category: category,
       morning: morning,
       evening: evening,
@@ -137,10 +140,10 @@ const Filters = (props) => {
                   }}
                   className="form-control form-control-sm ml-5 mr-5"
                 >
-                  <option value="tel-aviv">Tel-Aviv</option>
-                  <option>Jerusalem</option>
-                  <option>Eilat</option>
-                  <option>Haifa</option>
+                  <option value="TELAVIV">Tel-Aviv</option>
+                  <option value="JERUSALEM">Jerusalem</option>
+                  <option value="EILAT">Eilat</option>
+                  <option value="HAIFA">Haifa</option>
                 </select>
               </div>
             </div>
