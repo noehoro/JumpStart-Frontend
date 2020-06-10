@@ -225,9 +225,9 @@ function BuildProfile(props) {
                 <>
                     <h2 className="profileTitle"> What do you like more? </h2>
                     <div className="slideCon">
-                        <div>Beer or Wine</div>
+                        <h4>Beer or Wine</h4>
                         <div className="slider">
-                            <img className="icon" src="https://cdn.pixabay.com/photo/2017/05/05/19/33/beer-2288121_960_720.jpg" />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2016/03/30/13/05/beer-1290633_960_720.jpg" />
                             <Slider
                                 axis="x"
                                 xstep={1}
@@ -237,10 +237,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setBeer({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: 'rgb(121, 110, 223)'
+                                        backgroundColor: '#922c3f'
                                     },
                                     active: {
-                                        backgroundColor: 'rgb(211, 173, 155)'
+                                        backgroundColor: '#f3c114'
                                     },
                                     thumb: {
                                         width: 40,
@@ -249,11 +249,11 @@ function BuildProfile(props) {
                                     }
                                 }}
                             />
-                            <img className="icon" src={process.env.PUBLIC_URL + '/wine.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2016/07/26/16/16/wine-1543170_960_720.jpg" />
                         </div>
-                        <div>Cat or Dog</div>
+                        <h4>Cat or Dog</h4>
                         <div className="slider">
-                            <img className="icon" src={process.env.PUBLIC_URL + '/cat.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2015/02/14/10/16/cat-636172_960_720.jpg" />
                             <Slider
                                 axis="x"
                                 xstep={1}
@@ -263,10 +263,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setCat({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: 'rgb(121, 110, 223)'
+                                        backgroundColor: '#8998a6'
                                     },
                                     active: {
-                                        backgroundColor: 'rgb(211, 173, 155)'
+                                        backgroundColor: '#daba85'
                                     },
                                     thumb: {
                                         width: 40,
@@ -275,11 +275,11 @@ function BuildProfile(props) {
                                     }
                                 }}
                             />
-                            <img className="icon" src={process.env.PUBLIC_URL + '/dog.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2019/11/18/00/38/brown-and-white-dog-4633734_960_720.jpg" />
                         </div>
-                        <div>beach or pool</div>
+                        <h4>beach or pool</h4>
                         <div className="slider">
-                            <img className="icon" src={process.env.PUBLIC_URL + '/sea.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2016/08/26/14/30/sea-1622270_960_720.jpg" />
                             <Slider
                                 axis="x"
                                 xstep={1}
@@ -289,10 +289,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setPool({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: 'rgb(121, 110, 223)'
+                                        backgroundColor: '#2cc5cc'
                                     },
                                     active: {
-                                        backgroundColor: 'rgb(211, 173, 155)'
+                                        backgroundColor: '#088ad0'
                                     },
                                     thumb: {
                                         width: 40,
@@ -301,11 +301,11 @@ function BuildProfile(props) {
                                     }
                                 }}
                             />
-                            <img className="icon" src={process.env.PUBLIC_URL + '/pool.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2016/05/18/18/07/kid-1401157_960_720.jpg" />
                         </div>
-                        <div>Food from home or Gina</div>
+                        <h4>lunch box or Gina</h4>
                         <div className="slider">
-                            <img className="icon" src={process.env.PUBLIC_URL + '/food.png'} />
+                            <img className="icon" src="https://cdn.pixabay.com/photo/2013/10/25/13/57/lunch-box-200762_960_720.jpg" />
                             <Slider
                                 axis="x"
                                 xstep={1}
@@ -315,10 +315,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setGina({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: 'rgb(121, 110, 223)'
+                                        backgroundColor: '#b92638'
                                     },
                                     active: {
-                                        backgroundColor: 'rgb(211, 173, 155)'
+                                        backgroundColor: '#b9cf71'
                                     },
                                     thumb: {
                                         width: 40,
@@ -327,7 +327,7 @@ function BuildProfile(props) {
                                     }
                                 }}
                             />
-                            <img className="gina" src={process.env.PUBLIC_URL + '/gina.png'} />
+                            <img className="icon" src="https://static.wixstatic.com/media/5bef34_c442a42fd272440a9127fbcc3d7ee8c6~mv2.jpg" />
                         </div>
 
 
