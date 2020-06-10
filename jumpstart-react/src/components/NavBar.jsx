@@ -8,6 +8,7 @@ const NavBar = (props) => {
   const handleLogOut = () => {
     localStorage.removeItem("id");
     localStorage.removeItem("username");
+    localStorage.removeItem("sent");
     window.location.reload();
   };
 
@@ -31,10 +32,18 @@ const NavBar = (props) => {
             </Link>
           </li>
         )}
+
         {id && (
           <li className="nav-item mr-5 pr-5">
             <Link className="nav-link nav-text" to="/categories">
               <h4 className="tags">Look for event</h4>
+            </Link>
+          </li>
+        )}
+        {id && (
+          <li className="nav-item mr-5 pr-5">
+            <Link className="nav-link nav-text" to="/notifications">
+              <h4 className="tags">Feed</h4>
             </Link>
           </li>
         )}
