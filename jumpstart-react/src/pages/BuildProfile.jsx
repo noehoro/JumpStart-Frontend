@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import Button from "react-bootstrap/Button";
 import "./Login.css";
 import Slider from "react-input-slider";
@@ -26,19 +26,19 @@ function BuildProfile(props) {
   const [dinner, setDinner] = useState("0");
   const [boardGame, setBoardGame] = useState("0");
   const [escapeRoom, setEscapeRoom] = useState("0");
-  const [beer, setBeer] = useState({x: 5});
-  const [cat, setCat] = useState({x: 5});
-  const [pool, setPool] = useState({x: 5});
-  const [gina, setGina] = useState({x: 5});
+  const [beer, setBeer] = useState({ x: 5 });
+  const [cat, setCat] = useState({ x: 5 });
+  const [pool, setPool] = useState({ x: 5 });
+  const [gina, setGina] = useState({ x: 5 });
 
   const submit = () => {
     const postData = {
-      email: email,
-      fullname: firstName + " " + lastName,
-      gender: gender,
-      username: userName,
-      password: password,
-      categories: [
+      "email": email,
+      "fullname": firstName + " " + lastName,
+      "gender": gender,
+      "username": userName,
+      "password": password,
+      "categories": [
         yoga,
         meditation,
         TRX,
@@ -52,7 +52,7 @@ function BuildProfile(props) {
         boardGame,
         escapeRoom,
       ],
-      questions: [
+      "questions": [
         beer.x.toString(),
         cat.x.toString(),
         pool.x.toString(),
@@ -157,14 +157,14 @@ function BuildProfile(props) {
                   yoga
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setYoga("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  yoga
+                  <button className="lightBox" onClick={() => setYoga("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    yoga
                 </button>
-              )}
+                )}
               {meditation === "0" ? (
                 <button className="box" onClick={() => setMeditation("1")}>
                   <img
@@ -174,14 +174,14 @@ function BuildProfile(props) {
                   Meditation
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setMeditation("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Meditation
+                  <button className="lightBox" onClick={() => setMeditation("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Meditation
                 </button>
-              )}
+                )}
               {TRX === "0" ? (
                 <button className="box" onClick={() => setTRX("1")}>
                   <img
@@ -191,14 +191,14 @@ function BuildProfile(props) {
                   TRX
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setTRX("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  TRX
+                  <button className="lightBox" onClick={() => setTRX("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    TRX
                 </button>
-              )}
+                )}
               {cityTour === "0" ? (
                 <button className="box" onClick={() => setCityTour("1")}>
                   <img
@@ -208,14 +208,14 @@ function BuildProfile(props) {
                   City Tour
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setCityTour("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  City Tour
+                  <button className="lightBox" onClick={() => setCityTour("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    City Tour
                 </button>
-              )}
+                )}
             </div>
             <div>
               {hiking === "0" ? (
@@ -227,14 +227,14 @@ function BuildProfile(props) {
                   Hiking
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setHiking("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Hiking
+                  <button className="lightBox" onClick={() => setHiking("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Hiking
                 </button>
-              )}
+                )}
               {pubCrawl === "0" ? (
                 <button className="box" onClick={() => setPubCrawl("1")}>
                   <img
@@ -244,14 +244,14 @@ function BuildProfile(props) {
                   Pub Crawl
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setPubCrawl("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Pub Crawl
+                  <button className="lightBox" onClick={() => setPubCrawl("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Pub Crawl
                 </button>
-              )}
+                )}
               {lecture === "0" ? (
                 <button className="box" onClick={() => setLecture("1")}>
                   <img
@@ -261,14 +261,14 @@ function BuildProfile(props) {
                   Lecture
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setLecture("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Lecture
+                  <button className="lightBox" onClick={() => setLecture("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Lecture
                 </button>
-              )}
+                )}
               {woodwork === "0" ? (
                 <button className="box" onClick={() => setWoodwork("1")}>
                   <img
@@ -278,14 +278,14 @@ function BuildProfile(props) {
                   Wood Work
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setWoodwork("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Wood Work
+                  <button className="lightBox" onClick={() => setWoodwork("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Wood Work
                 </button>
-              )}
+                )}
             </div>
             <div>
               {standUp === "0" ? (
@@ -297,14 +297,14 @@ function BuildProfile(props) {
                   Stand-Up
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setStandUp("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Stand-Up
+                  <button className="lightBox" onClick={() => setStandUp("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Stand-Up
                 </button>
-              )}
+                )}
               {dinner === "0" ? (
                 <button className="box" onClick={() => setDinner("1")}>
                   <img
@@ -314,14 +314,14 @@ function BuildProfile(props) {
                   Dinner
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setDinner("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Dinner
+                  <button className="lightBox" onClick={() => setDinner("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Dinner
                 </button>
-              )}
+                )}
               {boardGame === "0" ? (
                 <button className="box" onClick={() => setBoardGame("1")}>
                   <img
@@ -331,14 +331,14 @@ function BuildProfile(props) {
                   Board Game
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setBoardGame("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Board Game
+                  <button className="lightBox" onClick={() => setBoardGame("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Board Game
                 </button>
-              )}
+                )}
               {escapeRoom === "0" ? (
                 <button className="box" onClick={() => setEscapeRoom("1")}>
                   <img
@@ -348,14 +348,14 @@ function BuildProfile(props) {
                   Escape Room
                 </button>
               ) : (
-                <button className="lightBox" onClick={() => setEscapeRoom("0")}>
-                  <img
-                    className="img"
-                    src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
-                  />
-                  Escape Room
+                  <button className="lightBox" onClick={() => setEscapeRoom("0")}>
+                    <img
+                      className="img"
+                      src="https://pbs.twimg.com/profile_images/702914691794931712/AbHdURQV_400x400.png"
+                    />
+                    Escape Room
                 </button>
-              )}
+                )}
             </div>
           </div>
           <Button className="nextButton" onClick={scrollTwo}>
@@ -379,7 +379,7 @@ function BuildProfile(props) {
                 xmin={0}
                 xmax={10}
                 x={beer.x}
-                onChange={({x}) => setBeer({x: parseFloat(x.toFixed(2))})}
+                onChange={({ x }) => setBeer({ x: parseFloat(x.toFixed(2)) })}
                 styles={{
                   track: {
                     backgroundColor: "#f3c114",
@@ -411,7 +411,7 @@ function BuildProfile(props) {
                 xmin={0}
                 xmax={10}
                 x={cat.x}
-                onChange={({x}) => setCat({x: parseFloat(x.toFixed(2))})}
+                onChange={({ x }) => setCat({ x: parseFloat(x.toFixed(2)) })}
                 styles={{
                   track: {
                     backgroundColor: "#daba85",
@@ -443,7 +443,7 @@ function BuildProfile(props) {
                 xmin={0}
                 xmax={10}
                 x={pool.x}
-                onChange={({x}) => setPool({x: parseFloat(x.toFixed(2))})}
+                onChange={({ x }) => setPool({ x: parseFloat(x.toFixed(2)) })}
                 styles={{
                   track: {
                     backgroundColor: "#2cc5cc",
@@ -475,7 +475,7 @@ function BuildProfile(props) {
                 xmin={0}
                 xmax={10}
                 x={gina.x}
-                onChange={({x}) => setGina({x: parseFloat(x.toFixed(2))})}
+                onChange={({ x }) => setGina({ x: parseFloat(x.toFixed(2)) })}
                 styles={{
                   track: {
                     backgroundColor: "#b92638",
