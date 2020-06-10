@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
-  const {id} = props;
+  const { id } = props;
 
   const handleLogOut = () => {
     localStorage.removeItem("id");
@@ -38,7 +38,6 @@ const NavBar = (props) => {
             </Link>
           </li>
         )}
-
         {id && (
           <li className="nav-item mr-5 pr-5 info-margin">
             <Link

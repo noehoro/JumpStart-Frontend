@@ -6,6 +6,7 @@ import NavBar from "./components/NavBar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Main from "./pages/Main";
 
+
 function App() {
   const [id, setId] = useState("");
   const [userName, setUserName] = useState("");
@@ -31,6 +32,7 @@ function App() {
             <Main />
           </Route>
         )}
+
         {!id && (
           <Route path="/">
             <Login />
