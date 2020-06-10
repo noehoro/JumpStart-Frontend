@@ -127,14 +127,13 @@ input:focus {
   height: 61px;
   margin-top: 25px;
   margin-left: 430px;
-  background-color: inherit;
+  background-color: none;
 
   border: 2px solid rgb(147, 151, 190);
   box-sizing: border-box;
   border-radius: 6px; 
   font-size: 16px;
   padding-left: 20px;
-  color: white;
 }
 
 

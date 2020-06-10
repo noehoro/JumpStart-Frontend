@@ -3,6 +3,7 @@ import Button from 'react-bootstrap/button'
 import './Login.css'
 import Slider from 'react-input-slider';
 import * as Scroll from 'react-scroll';
+import axios from "axios";
 
 
 function BuildProfile(props) {
@@ -32,6 +33,30 @@ function BuildProfile(props) {
     const [gina, setGina] = useState({ x: 5 });
 
     const submit = () => {
+
+        const postData = {
+            "email": email,
+            "fullname": firstName + ' ' + lastName,
+            "gender": gender,
+            "username": userName,
+            "password": password,
+            "categories": [yoga, meditation, TRX, cityTour, hiking, pubCrawl, lecture, woodwork, standUp, dinner, boardGame, escapeRoom],
+            "questions": [beer.x.toString(), cat.x.toString(), pool.x.toString(), gina.x.toString()]
+        }
+
+        axios
+            .post("https://jumpstarthack.herokuapp.com/api/signup", postData)
+            .then((res) => {
+                if (res.data.data) {
+                    localStorage.setItem("id", res.data.data.id);
+                    localStorage.setItem("username", res.data.data.username);
+                } else {
+                    console.log("error");
+                }
+                window.location.reload();
+            });
+
+
     }
 
     const scrollOne = () => {
@@ -237,10 +262,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setBeer({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: '#922c3f'
+                                        backgroundColor: '#f3c114'
                                     },
                                     active: {
-                                        backgroundColor: '#f3c114'
+                                        backgroundColor: '#922c3f'
                                     },
                                     thumb: {
                                         width: 40,
@@ -263,10 +288,10 @@ function BuildProfile(props) {
                                 onChange={({ x }) => setCat({ x: parseFloat(x.toFixed(2)) })}
                                 styles={{
                                     track: {
-                                        backgroundColor: '#8998a6'
+                                        backgroundColor: '#daba85'
                                     },
                                     active: {
-                                        backgroundColor: '#daba85'
+                                        backgroundColor: '#8998a6'
                                     },
                                     thumb: {
                                         width: 40,
