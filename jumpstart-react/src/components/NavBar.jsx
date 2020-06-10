@@ -1,9 +1,9 @@
-import React, {useState} from "react";
-import {Link} from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import "./NavBar.css";
 
 const NavBar = (props) => {
-  const {id} = props;
+  const { id } = props;
 
   const handleLogOut = () => {
     localStorage.removeItem("id");
@@ -15,19 +15,19 @@ const NavBar = (props) => {
     <div className="navbar-height">
       <ul className="nav custom-nav align-content-center d-flex">
         <li>
-          <img width="50px" className="logo" src={process.env.PUBLIC_URL + "/logo.jpeg"} />
+          <img className="logo" src={process.env.PUBLIC_URL + "/logo.jpeg"} />
         </li>
         {!id && (
           <li className="nav-item">
             <Link className="nav-link nav-text" to="/">
-              <h4>Log-In</h4>
+              <h4 className="tags">Log-In</h4>
             </Link>
           </li>
         )}
         {!id && (
           <li className="nav-item">
             <Link className="nav-link nav-text" to="/sign-up">
-              <h4>Sign-Up</h4>
+              <h4 className="tags">Sign-Up</h4>
             </Link>
           </li>
         )}

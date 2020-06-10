@@ -18,14 +18,13 @@
 .loginContainer {
   width: 100%;
   height: 89vh;
-  background-color: rgb(140, 197, 243);
-  text-align: center;
+  background-color: white;
 }
 
 .loginHeader {
-  padding-top: 20px;
-  margin-top: 0px;
+  margin-top: 32px;
   margin-bottom: 40px;
+  margin-left: 430px;
   font-size: 50px;
 }
 
@@ -91,22 +90,6 @@
     width: 500px;
 }
 
-.box{
-    width: 200px;
-    height: 200px;
-    margin-left: 20px;
-    margin-top: 20px;
-    background-color: rgb(155, 155, 211);
-}
-
-.lightBox{
-    width: 200px;
-    height: 200px;
-    margin-left: 20px;
-    margin-top: 20px;
-    background-color: rgb(211, 173, 155);
-}
-
 .icon {
     width: 40px;
     height: auto;
@@ -144,19 +127,120 @@ input:focus {
 
 .slideCon{
     width: 100%;
+    margin-top: 50px;
     height: auto;
     text-align: center;
 }
 
-.loginBox-2 {
-  width: 400px;
-  height: 71px;
-  margin-top: 50px;
-  margin-left: 40px;
+.loginInput{
+  width: 42%;
+  height: 61px;
+  margin-top: 16px;
+  margin-left: 430px;
+  background-color: inherit;
+
   border: 1px solid rgb(191, 195, 233);
   box-sizing: border-box;
-  border-radius: 6px;
+  border-radius: 6px; 
   font-size: 16px;
   padding-left: 20px;
-  color: black;
+  color: white;
 }
+
+
+.profileTitle{
+    align-self: center;
+    margin-top: 20px;   
+}
+
+.nextButton{
+    width: 100px;
+    height: 40px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: #20c3ca !important;
+    color: #364c64 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    font-style: bold !important;
+    border: none !important;
+  }
+
+  
+  .nextButton:hover {
+    background-color: #57dadf !important;
+    transition: ease-in ;
+  }
+
+  .boxes{
+      margin: auto;
+  }
+
+  .img{
+      width: 180px;
+      height: 180px;
+      
+  }
+
+  .box{
+    width: 180px;
+    height: 180px;
+    margin-left: 20px;
+    margin-top: 30px;
+    border: none;
+    
+    padding: 0;
+  }
+
+  .img2{
+    width: 180px;
+    height: 180px;
+
+  }
+
+  .lightBox{
+    width: 180px;
+    height: 180px;
+    margin-left: 20px;
+    margin-top: 20px;
+    border: none;
+    
+    padding: 0;
+    box-shadow: 0px 0px 20px rgb(147, 207, 141);
+}
+
+.submitButton{
+    width: 200px;
+    height: 80px;
+    margin-top: 20px;
+    align-self: center;
+    background-color: #399ad3 !important;
+    color: #364c64 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    font-style: bold !important;
+    border: none !important;
+
+  }
+
+  
+  .submitButton:hover {
+    background-color: #399ad3 !important;
+    transition: ease-in ;
+    box-shadow: 0px 0px 20px #ebf564
+  }
+
+  .goButton{
+    width: 150px;
+    height: 80px;
+    margin-left: 780px;
+    background-color: #399ad3 !important;
+    color: #364c64 !important;
+    font-size: 15px !important;
+    font-weight: 700 !important;
+    font-style: bold !important;
+    border: none !important;
+  }
+
+ 
+
