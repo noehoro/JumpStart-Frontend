@@ -63,6 +63,7 @@
     height: 71px;
     margin-top: 50px;
     margin-left: 40px;
+
   
     border: 1px solid rgb(191, 195, 233);
     box-sizing: border-box;
@@ -113,13 +114,14 @@
 }
 
 .gina {
-    width: 80px;
+    width: 90px;
     height: auto;
-    margin-left: 30px;
+    margin-left: 68px;
 }
 
 .slider{
-    margin-top: 40px;
+    margin-top: 20px;
+    margin-bottom: 30px;
 }
 
 .saperateLine {
@@ -137,4 +139,10 @@ input:focus {
 
 .input-color {
   background-color: white;
+}
+
+.slideCon{
+    width: 100%;
+    height: auto;
+    text-align: center;
 }

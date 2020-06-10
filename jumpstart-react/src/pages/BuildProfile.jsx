@@ -133,6 +133,7 @@ function BuildProfile(props) {
             </div>
             <hr className="line" />
             <div className="slideCon">
+                <div>Beer or Wine</div>
                 <div className="slider">
                     <img className="icon" src={process.env.PUBLIC_URL + '/beer.png'} />
                     <Slider
@@ -158,6 +159,7 @@ function BuildProfile(props) {
                     />
                     <img className="icon" src={process.env.PUBLIC_URL + '/wine.png'} />
                 </div>
+                <div>Cat or Dog</div>
                 <div className="slider">
                     <img className="icon" src={process.env.PUBLIC_URL + '/cat.png'} />
                     <Slider
@@ -183,6 +185,7 @@ function BuildProfile(props) {
                     />
                     <img className="icon" src={process.env.PUBLIC_URL + '/dog.png'} />
                 </div>
+                <div>beach or pool</div>
                 <div className="slider">
                     <img className="icon" src={process.env.PUBLIC_URL + '/sea.png'} />
                     <Slider
@@ -208,6 +211,7 @@ function BuildProfile(props) {
                     />
                     <img className="icon" src={process.env.PUBLIC_URL + '/pool.png'} />
                 </div>
+                <div>Food from home or Gina</div>
                 <div className="slider">
                     <img className="icon" src={process.env.PUBLIC_URL + '/food.png'} />
                     <Slider
