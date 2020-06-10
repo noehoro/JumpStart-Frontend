@@ -15,7 +15,7 @@ function Login(props) {
       .then((res) => {
         if (res.data.data) {
           setId(res.data.data.id);
-          console.log(res.data.data.username);
+
           localStorage.setItem("id", res.data.data.id);
           localStorage.setItem("username", res.data.data.username);
         } else {
@@ -27,16 +27,14 @@ function Login(props) {
 
   return (
     <div>
-      <div className="welcomeHeader">
-        <img className="logo" src={process.env.PUBLIC_URL + "/logo.jpeg"} />
-      </div>
+      <div className="welcomeHeader"></div>
       <div className="loginContainer">
         <div>
-          <h1 className="loginHeader">Login</h1>
+          <h1 className="loginHeader pt-5">Login</h1>
           <input
             type="text"
             name="userName"
-            className="loginBox input-color rounded-pill"
+            className="loginBox-2 input-color rounded-pill"
             placeholder=" User name"
             value={userName}
             onChange={(e) => setUserName(e.target.value)}
@@ -44,17 +42,17 @@ function Login(props) {
           <input
             type="password"
             name="password"
-            className="loginBox input-color rounded-pill"
+            className="loginBox-2 input-color rounded-pill"
             placeholder=" Password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <div>
+          <div className="mt-5 pt-5">
             <button
               className="bnt btn-primary mt-5 login-width rounded-pill"
               onClick={login}
             >
-              Login
+              Go!
             </button>
           </div>
         </div>

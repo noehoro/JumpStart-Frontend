@@ -13,7 +13,10 @@ const NavBar = (props) => {
 
   return (
     <div className="navbar-height">
-      <ul className="nav custom-nav">
+      <ul className="nav custom-nav align-content-center d-flex">
+        <li>
+          <img width="50px" className="logo" src={process.env.PUBLIC_URL + "/logo.jpeg"} />
+        </li>
         {!id && (
           <li className="nav-item">
             <Link className="nav-link nav-text" to="/">
